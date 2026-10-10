@@ -135,7 +135,7 @@ export const ExplorerTab: React.FC<ExplorerTabProps> = ({ onSpecimenSaved }) => 
   };
 
   return (
-    <div className="max-w-xl mx-auto px-4 py-4 space-y-6 pb-24 sm:pb-12">
+    <div className="max-w-xl mx-auto px-4 py-4 space-y-6 pb-10 sm:pb-12">
       {/* Intro hero banner */}
       {!selectedImage && !isScanning && (
         <div className="text-center space-y-2 py-3">
