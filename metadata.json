@@ -1,0 +1,10 @@
+{
+  "name": "BioRepalet",
+  "description": "Explorador botánico y entomológico inteligente para identificar flores, plantas e insectos con IA y guardar colecciones.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
