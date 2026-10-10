@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Floating Bottom Nav for ultra-smooth one-handed mobile navigation */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#16382C]/95 backdrop-blur-md border-t border-emerald-900/50 px-4 py-2 sm:hidden shadow-lg shadow-black/30">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#16382C]/95 backdrop-blur-md border-t border-emerald-900/50 px-4 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] sm:hidden shadow-lg shadow-black/30">
         <div className="flex justify-around items-center max-w-sm mx-auto">
           <button
             onClick={() => onTabChange('explorer')}

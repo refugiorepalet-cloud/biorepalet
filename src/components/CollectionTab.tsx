@@ -69,7 +69,7 @@ export const CollectionTab: React.FC<CollectionTabProps> = ({
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-4 space-y-6 pb-24 sm:pb-12">
+    <div className="max-w-4xl mx-auto px-4 py-4 space-y-6 pb-10 sm:pb-12">
       {/* Header and stats */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1 border-b border-stone-200/80">
         <div>

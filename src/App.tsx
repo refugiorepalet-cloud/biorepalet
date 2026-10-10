@@ -10,7 +10,7 @@ import { ExplorerTab } from './components/ExplorerTab';
 import { CollectionTab } from './components/CollectionTab';
 import { getSavedSpecimens, removeSpecimen } from './services/storageService';
 import { Specimen } from './types';
-import { Leaf, Heart } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('explorer');
@@ -78,12 +78,17 @@ export default function App() {
         )}
       </main>
 
-      {/* Nature-themed subtle footer */}
-      <footer className="py-6 border-t border-stone-200/80 text-center text-xs text-stone-600 space-y-1 pb-20 sm:pb-8">
-        <div className="flex items-center justify-center space-x-1.5 text-stone-600">
-          <Leaf className="w-3.5 h-3.5 text-emerald-700" />
-          <span className="font-semibold text-stone-700">BioRepalet</span>
-          <span>— Herbario y Entomología con Inteligencia Artificial</span>
+      {/* Minimal dark-green footer; extra bottom padding on mobile clears the fixed bottom nav */}
+      <footer className="bg-[#1F4A3A] border-t border-emerald-900/40 text-emerald-100/70 pt-5 pb-[calc(5.5rem+env(safe-area-inset-bottom))] sm:py-5">
+        <div className="max-w-4xl mx-auto px-4 flex items-center justify-center gap-2 text-center">
+          <Leaf className="hidden sm:block w-3.5 h-3.5 shrink-0 text-emerald-400/80" />
+          <p className="text-[11px] sm:text-xs leading-relaxed tracking-wide">
+            © 2026 <span className="font-semibold text-emerald-50/90">BioRepalet</span>.{' '}
+            <span className="block sm:inline">
+              Desarrollado en colaboración con{' '}
+              <span className="font-semibold text-emerald-300">crog</span>
+            </span>
+          </p>
         </div>
         <p className="text-[11px] text-stone-600">
           Clasificación biológica basada en modelos Gemini. Desarrollado en colaboración con crog.
