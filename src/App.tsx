@@ -86,7 +86,7 @@ export default function App() {
           <span>— Herbario y Entomología con Inteligencia Artificial</span>
         </div>
         <p className="text-[11px] text-stone-600">
-          Clasificación biológica basada en visión computacional y modelos Gemini
+          Clasificación biológica basada en modelos Gemini. Desarrollado en colaboración con crog.
         </p>
       </footer>
     </div>
