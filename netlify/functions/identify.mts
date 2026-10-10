@@ -26,6 +26,7 @@ export default async (req: Request) => {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: {
+        role: 'user',
         parts: [
           {
             inlineData: {
@@ -34,14 +35,15 @@ export default async (req: Request) => {
             },
           },
           {
-            text: `You are an expert botanist and entomologist. Analyze this image to identify the flower, plant, or insect.
-Return accurate biological information in Spanish.
-Ensure the category is strictly either "Flores" (if it is a flower, plant, tree, or fungi) or "Insectos" (if it is an insect, arachnid, butterfly, or arthropod).
-Be precise with scientific and common names, habitat details, IUCN conservation status, and a fascinating, lesser-known curious fact.`,
+            text: 'Analyze this image to identify the flower, plant, or insect.',
           },
         ],
       },
       config: {
+        systemInstruction: `You are an expert botanist and entomologist.
+Return accurate biological information in Spanish.
+Ensure the category is strictly either "Flores" (if it is a flower, plant, tree, or fungi) or "Insectos" (if it is an insect, arachnid, butterfly, or arthropod).
+Be precise with scientific and common names, habitat details, IUCN conservation status, and a fascinating, lesser-known curious fact.`,
         responseMimeType: 'application/json',
         responseSchema: {
           type: Type.OBJECT,
