@@ -90,6 +90,9 @@ export default function App() {
             </span>
           </p>
         </div>
+        <p className="text-[11px] text-stone-600">
+          Clasificación biológica basada en modelos Gemini. Desarrollado en colaboración con crog.
+        </p>
       </footer>
     </div>
   );
