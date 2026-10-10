@@ -14,7 +14,7 @@ export async function identifySpecimenImage(
   }
 
   // Determine API base path
-  const endpoints = ['/biorepalet/api/identify', '/api/identify'];
+  const endpoints = ['/api/identify'];
 
   let lastError: Error | null = null;
 
